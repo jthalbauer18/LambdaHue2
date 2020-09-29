@@ -15,7 +15,6 @@ import java.util.List;
 public class HalloJavamitForEach {
 
     public static void main(String[] args) {
-        String s = "";
         List<String> list = new ArrayList<>();
         list.add("Erste");
         list.add("Zweite");
@@ -24,5 +23,9 @@ public class HalloJavamitForEach {
         for (String l : list) {
             System.out.println(l);
         }
+        
+        list.forEach((String s)-> System.out.println(s));
+        
+        list.forEach(System.out::print);
     }
 }
