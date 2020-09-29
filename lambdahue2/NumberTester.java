@@ -5,6 +5,10 @@
  */
 package lambdahue2;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
 /**
  *
  * @author Jonny
@@ -37,6 +41,13 @@ public class NumberTester {
     }
 
     public void testFile() {
-
+        File file = new File("TestData.txt");
+        try (Scanner sc = new Scanner(file)) {
+            while (sc.hasNextLine()) {
+                System.out.println(sc.nextLine());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
