@@ -11,6 +11,7 @@ import java.util.List;
 /**
  *
  * @author Jonny
+ * Beispiel 2
  */
 public class HalloJavamitForEach {
 
@@ -26,6 +27,6 @@ public class HalloJavamitForEach {
         
         list.forEach((String s)-> System.out.println(s));
         
-        list.forEach(System.out::print);
+        list.forEach(System.out::println);
     }
 }
