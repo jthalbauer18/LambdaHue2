@@ -17,29 +17,32 @@ public class Main {
             return x % 2 == 0;
         });
         numberTester.setPalindromeTester(x -> {
-            int[] palinList = new int[x];
-            int[] palinListRev = new int[x];
-            for (int i = 0; i < x; i++) {
 
-                palinList[i] = Integer.toString(x).charAt(i);
+            int r;
+            int sum = 0; 
+            int temp;
 
+            temp = x;
+            while (x > 0) {
+                r = x % 10;  
+                sum = (sum * 10) + r;
+                x = x / 10;
             }
-            for (int i = 0; i < x; i++) {
-
-                palinListRev[x - 1] = Integer.toString(x).charAt(i);
-            }
-
-            return palinList.equals(palinListRev);
-
+            return temp == sum;
         });
         numberTester.setPrimeTester(x -> {
-            for (int i = 2; i <= x / 2; i++) {
-                if (x % i == 0) {
-                    return false;
+            if (x == 1) {
+                return false;
+            } else {
+                for (int i = 2; i <= Math.sqrt(x); i++) {
+                    if (x % i == 0) {
+                        return false;
+                    }
                 }
             }
-
             return true;
         });
+
+        System.out.println(numberTester.palindromeTester.testNumber(121));
     }
 }
