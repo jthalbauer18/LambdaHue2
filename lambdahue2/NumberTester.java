@@ -6,7 +6,7 @@
 package lambdahue2;
 
 import java.io.File;
-import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
@@ -43,10 +43,7 @@ public class NumberTester {
     public void testFile() {
         File file = new File("TestData.txt");
         try (Scanner sc = new Scanner(file)) {
-            while (sc.hasNextLine()) {
-                System.out.println(sc.nextLine());
-            }
-        } catch (IOException e) {
+            } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }

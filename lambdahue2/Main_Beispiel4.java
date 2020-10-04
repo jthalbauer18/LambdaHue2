@@ -15,7 +15,125 @@ public class Main_Beispiel4 {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        int erg = 0;
+        int erg;
+        Number number = new Number();
+        VectorCalculator vCalc = new VectorCalculator(((x, y) -> {
+
+            double x1 = x.getA() + y.getA();
+            double y1 = x.getB() + y.getB();
+
+            Number n = new Number();
+            n.setA(x1);
+            n.setB(y1);
+            return n;
+
+        }), ((x, y) -> {
+
+            double x1 = x.getA() - y.getA();
+            double y1 = x.getB() - y.getB();
+
+            Number n = new Number();
+            n.setA(x1);
+            n.setB(y1);
+            return n;
+        }), ((x, y) -> {
+
+            double x1 = x.getA() * y.getA();
+            double y1 = x.getB() * y.getB();
+
+            Number n = new Number();
+            n.setA(x1);
+            n.setB(y1);
+            return n;
+        }), (x, y) -> {
+
+            double x1 = x.getA() / y.getA();
+            double y1 = x.getB() / y.getB();
+
+            Number n = new Number();
+            n.setA(x1);
+            n.setB(y1);
+            return n;
+        });
+        
+        ComplexCalculator cCalc = new ComplexCalculator(((x, y) -> {
+
+            double x1 = x.getA() + x.getB();
+            double y1 = y.getA() + x.getB();
+
+            Number n = new Number();
+            n.setA(x1);
+            n.setB(y1);
+            return n;
+
+        }), ((x, y) -> {
+
+            double x1 = x.getA() - x.getB();
+            double y1 = y.getA() - y.getB();
+
+            Number n = new Number();
+            n.setA(x1);
+            n.setB(y1);
+            return n;
+        }), ((x, y) -> {
+
+            double x1 = x.getA() * x.getB() - y.getA() * y.getB();
+            double y1 = x.getA() * y.getB() + x.getB() * y.getA();
+
+            Number n = new Number();
+            n.setA(x1);
+            n.setB(y1);
+            return n;
+        }), (x, y) -> {
+
+            double x1 = x.getA() * x.getB() + y.getA() * y.getB();
+            double y1 = x.getA() * y.getB() - x.getB() * y.getA();
+
+            Number n = new Number();
+            n.setA(x1);
+            n.setB(y1);
+            return n;
+        });
+        
+        RationalCalculator rCalc = new RationalCalculator(((x, y) -> {
+
+            double x1 = x.getA() + x.getB();
+            double y1 = y.getA() + y.getB();
+
+            Number n = new Number();
+            n.setA(x1);
+            n.setB(y1);
+            return n;
+
+        }), ((x, y) -> {
+
+            double x1 = x.getA() - x.getB();
+            double y1 = y.getA() - y.getB();
+
+            Number n = new Number();
+            n.setA(x1);
+            n.setB(y1);
+            return n;
+        }), ((x, y) -> {
+
+            double x1 = x.getA() * x.getB();
+            double y1 = y.getA() * y.getB();
+
+            Number n = new Number();
+            n.setA(x1);
+            n.setB(y1);
+            return n;
+        }), (x, y) -> {
+
+            double x1 = x.getA() - x.getB();
+            double y1 = y.getA() - y.getB();
+
+            Number n = new Number();
+            n.setA(x1);
+            n.setB(y1);
+            return n;
+        }
+        );
 
         do {
             System.out.println("Choose calculator:");
@@ -27,19 +145,19 @@ public class Main_Beispiel4 {
             erg = scn.nextInt();
 
             System.out.println("Enter number x a");
-            int zahl1 = scn.nextInt();
+            double zahl1 = scn.nextDouble();
             System.out.println("Enter number x b");
-            int zahl2 = scn.nextInt();
+            double zahl2 = scn.nextDouble();
             System.out.println("Enter number y a");
-            int zahl3 = scn.nextInt();
+            double zahl3 = scn.nextDouble();
             System.out.println("Enter number y b");
-            int zahl4 = scn.nextInt();
+            double zahl4 = scn.nextDouble();
             switch (erg) {
                 case 1:
                     switch (operation()) {
-                        case 1: Abstract Calcu
+                        case 1:
+
                     }
-                    ;
 
             }
         } while (erg <= 3);
