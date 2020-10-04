@@ -5,6 +5,8 @@
  */
 package lambdahue2;
 
+import lambdahue2.Number.CalculationOperation;
+
 /**
  *
  * @author Jonny
@@ -33,11 +35,6 @@ public class RationalCalculator extends AbstractCalculator {
     @Override
     public Number divide(Number a, Number b) {
         return divide.calc(a, b);
-    }
-
-    @Override
-    public Number calc(Number x, Number y) {
-        return 
     }
 
 }

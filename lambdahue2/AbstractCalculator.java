@@ -5,11 +5,13 @@
  */
 package lambdahue2;
 
+import lambdahue2.Number.CalculationOperation;
+
 /**
  *
  * @author Jonny
  */
-public abstract class AbstractCalculator implements CalculationOperation {
+public abstract class AbstractCalculator {
     protected CalculationOperation add;
     protected CalculationOperation subtract;
     protected CalculationOperation multiply;

@@ -5,6 +5,8 @@
  */
 package lambdahue2;
 
+import lambdahue2.Number.CalculationOperation;
+
 /**
  *
  * @author Jonny
@@ -17,27 +19,22 @@ public class VectorCalculator extends AbstractCalculator {
 
     @Override
     public Number add(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return add.calc(a, b);
     }
 
     @Override
     public Number subtract(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return subtract.calc(a, b);
     }
 
     @Override
     public Number multiply(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return multiply.calc(a, b);
     }
 
     @Override
     public Number divide(Number a, Number b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return divide.calc(a, b);
     }
 
-    @Override
-    public Number calc(Number x, Number y) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }
