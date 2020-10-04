@@ -17,7 +17,6 @@ public class Main {
             return x % 2 == 0;
         });
         numberTester.setPalindromeTester(x -> {
-
             int r;
             int sum = 0; 
             int temp;
@@ -42,7 +41,7 @@ public class Main {
             }
             return true;
         });
-
-        System.out.println(numberTester.palindromeTester.testNumber(121));
+        numberTester.testFile();
+        
     }
 }

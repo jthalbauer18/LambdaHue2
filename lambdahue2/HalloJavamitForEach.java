@@ -21,9 +21,9 @@ public class HalloJavamitForEach {
         list.add("Zweite");
         list.add("Dritte");
 
-        for (String l : list) {
+        list.forEach((l) -> {
             System.out.println(l);
-        }
+        });
         
         list.forEach((String s)-> System.out.println(s));
         
