@@ -43,8 +43,12 @@ public class NumberTester {
     public void testFile() {
         File file = new File("TestData.txt");
         try (Scanner sc = new Scanner(file)) {
+            sc.nextLine();
+            
             } catch (FileNotFoundException e) {
+                
             e.printStackTrace();
         }
+        
     }
 }

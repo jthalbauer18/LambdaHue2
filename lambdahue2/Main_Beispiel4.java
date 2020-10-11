@@ -55,7 +55,7 @@ public class Main_Beispiel4 {
             n.setB(y1);
             return n;
         });
-        
+
         ComplexCalculator cCalc = new ComplexCalculator(((x, y) -> {
 
             double x1 = x.getA() + x.getB();
@@ -70,7 +70,6 @@ public class Main_Beispiel4 {
 
             double x1 = x.getA() - x.getB();
             double y1 = y.getA() - y.getB();
-
             Number n = new Number();
             n.setA(x1);
             n.setB(y1);
@@ -94,7 +93,7 @@ public class Main_Beispiel4 {
             n.setB(y1);
             return n;
         });
-        
+
         RationalCalculator rCalc = new RationalCalculator(((x, y) -> {
 
             double x1 = x.getA() + x.getB();
@@ -141,22 +140,67 @@ public class Main_Beispiel4 {
             System.out.println("2 - Vector calculator");
             System.out.println("3 - Complex calculator");
             System.out.println("4 - Exit program");
-
+            Number n1 = new Number();
+            Number n2 = new Number();
             erg = scn.nextInt();
 
             System.out.println("Enter number x a");
-            double zahl1 = scn.nextDouble();
+            double xa = scn.nextDouble();
             System.out.println("Enter number x b");
-            double zahl2 = scn.nextDouble();
+            double xb = scn.nextDouble();
             System.out.println("Enter number y a");
-            double zahl3 = scn.nextDouble();
+            double ya = scn.nextDouble();
             System.out.println("Enter number y b");
-            double zahl4 = scn.nextDouble();
+            double yb = scn.nextDouble();
+            n1.setA(xa);
+            n1.setB(xb);
+            n2.setA(ya);
+            n2.setB(yb);
             switch (erg) {
                 case 1:
                     switch (operation()) {
                         case 1:
-
+                            rCalc.add(n1, n2);
+                            break;
+                        case 2:
+                            rCalc.subtract(n1, n2);
+                            break;
+                        case 3:
+                            rCalc.multiply(n1, n2);
+                            break;
+                        case 4:
+                            rCalc.divide(n1, n2);
+                            break;
+                    }
+                case 2:
+                    switch (operation()) {
+                        case 1:
+                            vCalc.add(n1, n2);
+                            break;
+                        case 2:
+                            vCalc.subtract(n1, n2);
+                            break;
+                        case 3:
+                            vCalc.multiply(n1, n2);
+                            break;
+                        case 4:
+                            vCalc.divide(n1, n2);
+                            break;
+                    }
+                case 3:
+                    switch (operation()) {
+                        case 1:
+                            cCalc.add(n1, n2);
+                            break;
+                        case 2:
+                            cCalc.subtract(n1, n2);
+                            break;
+                        case 3:
+                            cCalc.multiply(n1, n2);
+                            break;
+                        case 4:
+                            cCalc.divide(n1, n2);
+                            break;
                     }
 
             }
