@@ -160,49 +160,84 @@ public class Main_Beispiel4 {
                 case 1:
                     switch (operation()) {
                         case 1:
-                            rCalc.add(n1, n2);
+                            Number nErg1 = rCalc.add(n1, n2);
+                            System.out.println("Solution:");
+                            System.out.println("a = " + nErg1.getA());
+                            System.out.println("b = " + nErg1.getB());
                             break;
                         case 2:
-                            rCalc.subtract(n1, n2);
+                            Number nErg2 = rCalc.subtract(n1, n2);
+                            System.out.println("Solution:");
+                            System.out.println("a = " + nErg2.getA());
+                            System.out.println("b = " + nErg2.getB());
                             break;
                         case 3:
-                            rCalc.multiply(n1, n2);
+                            Number nErg3 = rCalc.multiply(n1, n2);
+                            System.out.println("Solution:");
+                            System.out.println("a = " + nErg3.getA());
+                            System.out.println("b = " + nErg3.getB());
                             break;
                         case 4:
-                            rCalc.divide(n1, n2);
+                            Number nErg4 = rCalc.divide(n1, n2);
+                            System.out.println("Solution:");
+                            System.out.println("a = " + nErg4.getA());
+                            System.out.println("b = " + nErg4.getB());
                             break;
                     }
                 case 2:
                     switch (operation()) {
                         case 1:
-                            vCalc.add(n1, n2);
+                            Number nErg1 = vCalc.add(n1, n2);
+                            System.out.println("Solution:");
+                            System.out.println("a = " + nErg1.getA());
+                            System.out.println("b = " + nErg1.getB());
                             break;
                         case 2:
-                            vCalc.subtract(n1, n2);
+                            Number nErg2 = vCalc.subtract(n1, n2);
+                            System.out.println("Solution:");
+                            System.out.println("a = " + nErg2.getA());
+                            System.out.println("b = " + nErg2.getB());
                             break;
                         case 3:
-                            vCalc.multiply(n1, n2);
+                            Number nErg3 = vCalc.multiply(n1, n2);
+                            System.out.println("Solution:");
+                            System.out.println("a = " + nErg3.getA());
+                            System.out.println("b = " + nErg3.getB());
                             break;
                         case 4:
-                            vCalc.divide(n1, n2);
+                            Number nErg4 = vCalc.divide(n1, n2);
+                            System.out.println("Solution:");
+                            System.out.println("a = " + nErg4.getA());
+                            System.out.println("b = " + nErg4.getB());
                             break;
                     }
                 case 3:
                     switch (operation()) {
                         case 1:
-                            cCalc.add(n1, n2);
+                            Number nErg1 = cCalc.add(n1, n2);
+                            System.out.println("Solution:");
+                            System.out.println("a = " + nErg1.getA());
+                            System.out.println("b = " + nErg1.getB());
                             break;
                         case 2:
-                            cCalc.subtract(n1, n2);
+                            Number nErg2 = cCalc.subtract(n1, n2);
+                            System.out.println("Solution:");
+                            System.out.println("a = " + nErg2.getA());
+                            System.out.println("b = " + nErg2.getB());
                             break;
                         case 3:
-                            cCalc.multiply(n1, n2);
+                            Number nErg3 = cCalc.multiply(n1, n2);
+                            System.out.println("Solution:");
+                            System.out.println("a = " + nErg3.getA());
+                            System.out.println("b = " + nErg3.getB());
                             break;
                         case 4:
-                            cCalc.divide(n1, n2);
+                            Number nErg4 = cCalc.divide(n1, n2);
+                            System.out.println("Solution:");
+                            System.out.println("a = " + nErg4.getA());
+                            System.out.println("b = " + nErg4.getB());
                             break;
                     }
-
             }
         } while (erg <= 3);
     }
