@@ -16,7 +16,6 @@ public class Main_Beispiel4 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int erg;
-        Number number = new Number();
         VectorCalculator vCalc = new VectorCalculator(((x, y) -> {
 
             double x1 = x.getA() + y.getA();
@@ -55,6 +54,7 @@ public class Main_Beispiel4 {
             n.setB(y1);
             return n;
         });
+        
 
         ComplexCalculator cCalc = new ComplexCalculator(((x, y) -> {
 
@@ -93,6 +93,7 @@ public class Main_Beispiel4 {
             n.setB(y1);
             return n;
         });
+        
 
         RationalCalculator rCalc = new RationalCalculator(((x, y) -> {
 
